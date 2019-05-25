@@ -1,8 +1,8 @@
-build:
+main.bin: main.asm
 	z80asm -v -fm -l -omain.bin main.asm
 
-run:
+run: main.bin
 	z80sim -f2 -z -x main.bin
 
 clean:
-	rm main.bin
+	rm -f main.bin
